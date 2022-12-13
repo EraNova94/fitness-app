@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Josefin Sans";
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+  width: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+.hero-banner-img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+}
+
+.exercise-card {
+  width: 290px;
+  height: 300px;
+  background: #fff;
+  border-top: 4px solid #ff2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 20px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+  height: 200px;
+}
+
+.scroll-bar .css-1aquho2-MuiTabs-indicator {
+  display: none;
+}
+
+.body-part-card {
+  /* transform: scale(0.5, 0.5); */
+  transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.body-part-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+  color: #ff2625 !important;
+  border: 1px solid #ff2625 !important;
+}
+
+.exercise-video {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 320px;
+  height: 350px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  .detail-image {
+    width: 300px;
+    height: 300px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-banner-img {
+    right: 10px;
+    top: 0px;
+    width: 600px;
+    height: 530px;
+    margin-top: -160px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  .exercise-card {
+    width: 270px;
+  }
+
+  .exercise-video {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .hero-banner-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .exercise-card {
+    width: 280px;
+  }
+  .MuiBox-root .css-1p959bk {
+    padding-left: 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .MuiButtonBase-root.MuiTabScrollButton-root.MuiTabScrollButton-horizontal.MuiTabs-scrollButtons.MuiTabs-scrollButtonsHideMobile.css-145v6pe-MuiButtonBase-root-MuiTabScrollButton-root {
+    display: inline-flex;
+    width: 20px;
   }
 }
